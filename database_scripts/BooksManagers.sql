@@ -18,7 +18,7 @@ VALUES
 ('rfkuang@book.com', SHA2('pass123', 256), 'She/Her', 'RF', 'Kuang', NOW());
 INSERT INTO BooksManagers (emailAddress, password, pronouns, firstName, lastName, dateCreated)
 VALUES
-('brandon@book.com', SHA2('pass123', 256), 'She/Her', 'Brandon', 'Sanderson', NOW());
+('brandon@book.com', SHA2('pass123', 256), 'He/Him', 'Brandon', 'Sanderson', NOW());
 
 INSERT INTO BooksManagers (emailAddress, password, pronouns, firstName, lastName, dateCreated)
 VALUES

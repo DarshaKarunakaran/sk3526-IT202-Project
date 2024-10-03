@@ -1,4 +1,11 @@
+
 <?php
+/*Name: Saidarsha Karunakaran
+Date: 10/2/24
+Course: IT202
+Section: 001
+Assignment Name: IT-202 Phase 1 Assignment: Login and Logout
+Email: sk3526@njit.edu */
  function getDB() {
    $host = 'sql1.njit.edu';
    $port = 3306;

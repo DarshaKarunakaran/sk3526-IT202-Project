@@ -1,3 +1,10 @@
+/*Name: Saidarsha Karunakaran
+--Date: 10/18/2024
+--IT202-001
+--Phase 2 Assignment: CRUD Categories and Items
+--Email: sk3526@njit.edu
+*/
+
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net

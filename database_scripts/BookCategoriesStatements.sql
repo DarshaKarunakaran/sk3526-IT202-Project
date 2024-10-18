@@ -1,3 +1,9 @@
+/*Name: Saidarsha Karunakaran
+--Date: 10/18/2024
+--IT202-001
+--Phase 2 Assignment: CRUD Categories and Items
+--Email: sk3526@njit.edu
+*/
 CREATE TABLE BookCategories (
 BookCategoryID       INT(11)        NOT NULL,
 BookCategoryCode     VARCHAR(255)   NOT NULL   UNIQUE,

@@ -1,0 +1,19 @@
+Create Category
+http://localhost:3000/addbookcategory.test.php?BookCategoryID=700&BookCategoryCode=ABC&BookCategoryName=Alpha&BookShelfNumber=701
+
+Verify Create Category
+http://localhost:3000/listbookcategories.test.php
+
+
+Update Category
+http://localhost:3000/changebookcategory.test.php?BookCategoryID=100&BookCategoryCode=FIC&BookCategoryName=Fiction&BookShelfNumber=101
+
+Verify Update Category
+http://localhost:3000/listbookcategories.test.php
+
+
+Delete Category
+http://localhost:3000/removebookcategory.test.php?BookCategoryID=700
+
+Verify Delete Category
+http://localhost:3000/listbookcategories.test.php

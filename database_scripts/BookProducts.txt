@@ -1,0 +1,17 @@
+Create Category
+http://localhost:3000/addbookproduct.test.php?BookProductID=700&BookProductCode=ABC&BookProductName=ALPHA&BookProductAuthor=Hello Kitty&BookDescription=This is a book about Alphabets. This Book was written by Hello Kityy.&BookCategoryID=100&BookWholesalePrice=10&BookListPrice=15
+
+Verify Create Category
+http://localhost:3000/listbookproducts.test.php
+
+Update Category
+http://localhost:3000/changebookproduct.test.php?BookProductID=700&BookCategoryCode=QWE&BookCategoryName=Alpha
+
+Verify Update Category
+http://localhost:3000/listbookproducts.test.php
+
+Delete Category
+http://localhost:3000/removebookproduct.test.php?BookProductID=700
+
+Verify Delete Category
+http://localhost:3000/listbookproducts.test.php

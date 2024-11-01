@@ -1,3 +1,4 @@
+
 <?php
 /*Name: Saidarsha Karunakaran
 Date: 10/2/24
@@ -6,12 +7,22 @@ Section: 001
 Assignment Name: IT-202 Phase 1 Assignment: Login and Logout
 Email: sk3526@njit.edu */
 session_start();
+include("bookcategory.php");
+include("bookproduct.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Book Store Inventory Helper</title></head>
+<head>
+   <title>Book Store Helper</title>
+</head>
 <body>
-   <section id="container">
+   <header>
+       <?php include("header.inc.php"); ?>
+   </header>
+   <section style="height: 425px;">
+       <nav style="float: left; height: 100%;">
+           <?php include("nav.inc.php"); ?>
+       </nav>
        <main>
            <?php
            if (isset($_REQUEST['content'])) {
@@ -22,5 +33,8 @@ session_start();
            ?>
        </main>
    </section>
+   <footer>
+       <?php include("footer.inc.php"); ?>
+   </footer>
 </body>
 </html>

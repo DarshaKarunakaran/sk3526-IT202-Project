@@ -5,7 +5,7 @@ IT202-001
 Phase 2 Assignment: CRUD Categories and Items
 Email: sk3526@njit.edu
 */
-include("bookcategory.php");
+include_once("bookcategory.php");
 $BookCategoryID = $_GET['BookCategoryID'];
 $category = Category::findCategory($BookCategoryID);
 $category->BookCategoryID = $_GET['BookCategoryID'];

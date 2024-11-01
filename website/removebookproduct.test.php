@@ -6,7 +6,7 @@ Phase 2 Assignment: CRUD Categories and Items
 Email: sk3526@njit.edu
 */
 error_log("\$_GET " . print_r($_GET, true));
-include("bookproduct.php");
+include_once("bookproduct.php");
 $BookProductID = $_GET['BookProductID'];
 $product = Product::findProduct($BookProductID);
 

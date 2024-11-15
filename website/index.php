@@ -1,4 +1,3 @@
-
 <?php
 /*Name: Saidarsha Karunakaran
 Date: 10/2/24
@@ -14,6 +13,8 @@ include("bookproduct.php");
 <html>
 <head>
    <title>Book Store Helper</title>
+   <link rel="stylesheet" type="text/css" href="ih_styles.css">
+   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
    <header>
@@ -25,7 +26,7 @@ include("bookproduct.php");
        </nav>
        <main>
            <?php
-           if (isset($_REQUEST['content'])) {
+           if (isset($_REQUEST['content']) && file_exists($_REQUEST['content'] . ".inc.php")) {
                include($_REQUEST['content'] . ".inc.php");
            } else {
                include("main.inc.php");

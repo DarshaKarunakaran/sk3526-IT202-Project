@@ -1,27 +1,27 @@
 <?php
 /*Name: Saidarsha Karunakaran
-Date: 10/18/2024
+Date: 11/15/2024
 IT202-001
-Phase 2 Assignment: CRUD Categories and Items
+IT-202 Phase 4 Assignment: Input Filtering and CSS Styling
 Email: sk3526@njit.edu
 */
 include_once("bookproduct.php");
 
 if (isset($_SESSION['login'])) {
-    $BookProductID = $_POST['BookProductID'] ?? null; 
-    $BookProductCode = $_POST['BookProductCode'] ?? null;
-    $BookProductName = $_POST['BookProductName'] ?? null;
-    $BookProductAuthor = $_POST['BookProductAuthor'] ?? null;
-    $BookDescription = $_POST['BookDescription'] ?? null;
-    $BookCategoryID = $_POST['BookCategoryID'] ?? null;
-    $BookWholesalePrice = $_POST['BookWholesalePrice'] ?? null;
-    $BookListPrice = $_POST['BookListPrice'] ?? null;
+    $BookProductID = htmlspecialchars($_POST['BookProductID'] ?? null); 
+    $BookProductCode = htmlspecialchars($_POST['BookProductCode'] ?? null);
+    $BookProductName = htmlspecialchars($_POST['BookProductName'] ?? null);
+    $BookProductAuthor = htmlspecialchars($_POST['BookProductAuthor'] ?? null);
+    $BookDescription = htmlspecialchars($_POST['BookDescription'] ?? null);
+    $BookCategoryID = htmlspecialchars($_POST['BookCategoryID'] ?? null);
+    $BookWholesalePrice = htmlspecialchars($_POST['BookWholesalePrice'] ?? null);
+    $BookListPrice = htmlspecialchars($_POST['BookListPrice'] ?? null);
 
-    if ((trim($BookProductID) == '') or (!is_numeric($BookProductID))) {
+    if ((trim($BookProductID) == '') or (!is_numeric($BookProductID)) or ((int)$BookProductID != $BookProductID)) {
         echo "<h2>Sorry, you must enter a valid Product ID number</h2>\n";
-    } elseif ((trim($BookWholesalePrice) == '') or (!is_numeric($BookWholesalePrice))) {
+    } elseif ((trim($BookWholesalePrice) == '') or (!is_numeric($BookWholesalePrice)) or ((float)$BookWholesalePrice != $BookWholesalePrice)) {
         echo "<h2>Sorry, you must enter a valid Wholesale Price</h2>\n";
-    } elseif ((trim($BookListPrice) == '') or (!is_numeric($BookListPrice))) {
+    } elseif ((trim($BookListPrice) == '') or (!is_numeric($BookListPrice)) or ((float)$BookListPrice != $BookListPrice)) {
         echo "<h2>Sorry, you must enter a valid List Price</h2>\n";
     } else {
         $product = new Product(

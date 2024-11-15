@@ -1,31 +1,43 @@
-<?php
-/*Name: Saidarsha Karunakaran
-Date: 10/18/2024
+<script language="javascript">
+    /*Name: Saidarsha Karunakaran
+Date: 11/15/2024
 IT202-001
-Phase 2 Assignment: CRUD Categories and Items
+IT-202 Phase 4 Assignment: Input Filtering and CSS Styling
 Email: sk3526@njit.edu
 */
-require_once("bookproduct.php");
-
-$products = Product::getProducts();
-
-if ($products) {
-    echo "<h2>Book Products</h2>\n";
-    echo "<table border='1'>\n";
-    echo "<tr><th>ID</th><th>Code</th><th>Name</th><th>Author</th><th>Category</th><th>Wholesale Price</th><th>List Price</th></tr>\n";
-    foreach ($products as $product) {
-        echo "<tr>";
-        echo "<td>{$product->BookProductID}</td>";
-        echo "<td>{$product->BookProductCode}</td>";
-        echo "<td>{$product->BookProductName}</td>";
-        echo "<td>{$product->BookProductAuthor}</td>";
-        echo "<td>{$product->BookCategoryID}</td>";
-        echo "<td>{$product->BookWholesalePrice}</td>";
-        echo "<td>{$product->BookListPrice}</td>";
-        echo "</tr>\n";
+    function listbox_dblclick() {
+        document.products.displaybookproduct.click();
     }
-    echo "</table>\n";
-} else {
-    echo "<h2>No products found</h2>\n";
-}
-?>
+    function button_click(target) {
+        var userConfirmed = true;
+        if (target == 1) {
+            userConfirmed = confirm("Are you sure you want to remove this book product?");
+        }
+        if (userConfirmed) {
+            if (target == 0) document.products.action = "index.php?content=displaybookproduct";
+            if (target == 1) document.products.action = "index.php?content=removebookproduct";
+            if (target == 2) document.products.action = "index.php?content=updatebookproduct";
+        } else {
+            alert("Action canceled.");
+        }
+    }
+</script>
+
+<h2>Select Book Product</h2>
+
+<form name="products" method="post">
+    <select name="BookProductID" size="20" ondblclick="listbox_dblclick()">
+        <?php
+        $products = Product::getProducts();
+        foreach ($products as $product) {
+            $BookProductID = $product->BookProductID;
+            $name = $BookProductID . " - " . $product->BookProductName . ", " . $product->BookProductAuthor;
+            echo "<option value=\"$BookProductID\">$name</option>\n";
+        }
+        ?>
+    </select>
+    <br>
+    <input type="submit" onclick="button_click(0)" name="displaybookproduct" value="View Product">
+    <input type="submit" onclick="button_click(1)" name="deletebookproduct" value="Delete Product">
+    <input type="submit" onclick="button_click(2)" name="updatebookproduct" value="Update Product">
+</form>

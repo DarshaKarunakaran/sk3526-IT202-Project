@@ -9,19 +9,19 @@ Email: sk3526@njit.edu
    <table cellpadding="1" border="0">
        <tr>
            <td>Category ID:</td>
-           <td><input type="text" name="BookCategoryID" size="4"></td>
+           <td><input type="number" name="BookCategoryID" size="4" min = "100" max = "1000" required></td>
        </tr>
        <tr>
            <td>Category Code:</td>
-           <td><input type="text" name="BookCategoryCode" size="20"></td>
+           <td><input type="text" name="BookCategoryCode" size="20"  placeholder="XXX" minlength ="3" maxlength="10" required></td>
        </tr>
        <tr>
            <td>Category Name:</td>
-           <td><input type="text" name="BookCategoryName" size="50"></td>
+           <td><input type="text" name="BookCategoryName" size="50" minlength ="3" maxlength="10" required></td>
        </tr>
        <tr>
            <td>Shelf Number: </td>
-           <td><input type="text" name="BookShelfNumber" size="20"></td>
+           <td><input type="text" name="BookShelfNumber" size="20" minlength ="3" maxlength="10" required></td>
        </tr>
    </table><br>
    <input type="submit" value="Submit New Category">

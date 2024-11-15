@@ -1,0 +1,131 @@
+/*Name: Saidarsha Karunakaran
+Date: 11/15/2024
+IT202-001
+IT-202 Phase 4 Assignment: Input Filtering and CSS Styling
+Email: sk3526@njit.edu
+*/
+body {
+    background-color:#faf0e6;
+    font-family: 'Courier New', Courier, monospace, Tahoma, sans-serif;
+    font-size: 80%;
+    color: #333333;
+    margin: 0px;
+   padding: 0px;
+   overflow-x: hidden;
+
+ }
+ h1, h2, h3, h4{
+    margin: 0px;
+    padding: 0px;
+
+ }
+ 
+ 
+ h1 {
+    font-family: 'Courier New', Courier, monospace, Tahoma, sans-serif;
+    font-size: 120%;
+    color: #334d55;
+ }
+ 
+ 
+ h2 {
+    font-family: 'Courier New', Courier, monospace, Tahoma, sans-serif;
+    font-size: 120%;
+    color: #334d55;
+ }
+ h3 {
+    font-family: 'Courier New', Courier, monospace, Tahoma, sans-serif;
+    font-size: 110%;
+    color: #334d55;
+ }
+ h4 {
+    font-family: 'Courier New', Courier, monospace, Tahoma, sans-serif;
+    font-size: 100%;
+    color: #334d55;
+ }
+ 
+ 
+ footer {
+    font-family: Geneva, Tahoma, sans-serif;
+    clear: both;
+    text-align: center;
+    padding: 7px;
+    border-bottom: 1px solid #faf0e6;
+    border-top: 1px solid #faf0e6;
+    background-color: #f5827d;
+    width: 100%;
+ 
+ }
+ 
+ main {
+    padding: 5px;
+    border-top: 1px solid #faf0e6;
+    float: left;
+    width: 55%;
+    height: 100%;
+ }
+ 
+ main table {
+    padding: 2px;
+ }
+ 
+ main td {
+    padding: 2px;
+ }
+ 
+ header {
+    padding: 7px;
+    border-bottom: 1px solid #E2EAEF;
+    height: 40px;
+    width: 100%;
+    background-color: #f5827d;
+ }
+ 
+ nav {
+    padding: 5px;
+    border-bottom: 1px solid #E2EAEF;
+    border-top: 1px solid #E2EAEF;
+    border-right: 1px solid #E2EAEF;
+    background-color: #f5827d;
+    width: 20%;
+ }
+ 
+ a {
+    color: #a93545;
+    text-decoration: none;
+ }
+ 
+ a:link {
+    color: #a93545;
+    text-decoration: none;
+ }
+ 
+ a:visited {
+    color: #003049;
+    text-decoration: none;
+ }
+ 
+ a:hover {
+    color: #0088bb;
+    text-decoration: underline;
+ }
+ input {
+    border: 1px solid currentcolor;
+ }
+ 
+ input[type=submit] {
+    font-family: Verdana, Arial, sans-serif;
+ }
+ 
+ input:required:invalid {
+    border: 1px solid red;
+ }
+ 
+ input:required:valid {
+    border: 1px solid limegreen;
+ }
+ 
+ input:focus {
+    background-color: #e6f7fa;
+ }
+ 

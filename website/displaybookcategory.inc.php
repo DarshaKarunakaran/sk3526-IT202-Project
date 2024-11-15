@@ -1,8 +1,8 @@
 <?php
 /*Name: Saidarsha Karunakaran
-Date: 11/01/2024
+Date: 11/15/2024
 IT202-001
-IT-202 Phase 3 Assignment: HTML Website Layout
+IT-202 Phase 4 Assignment: Input Filtering and CSS Styling
 Email: sk3526@njit.edu
 */
 if (!isset($_REQUEST['BookCategoryID']) or (!is_numeric($_REQUEST['BookCategoryID']))) {
@@ -11,13 +11,13 @@ if (!isset($_REQUEST['BookCategoryID']) or (!is_numeric($_REQUEST['BookCategoryI
    <a href="index.php?content=listbookcategories">List Categories</a>
 <?php
 } else {
-   $BookCategoryID = $_REQUEST['BookCategoryID'];
-   $category = Category::findCategory($BookCategoryID);
+   $categoryID = $_REQUEST['BookCategoryID'];
+   $category = Category::findCategory($categoryID);
    if ($category) {
        echo $category;
        echo "<br><br>\n";
    } else {
-       echo "<h2>Sorry, category $BookCategoryID not found</h2>\n";
+       echo "<h2>Sorry, category $categoryID not found</h2>\n";
    }
 }
 ?>

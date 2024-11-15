@@ -9,35 +9,35 @@ Email: sk3526@njit.edu
    <table cellpadding="1" border="0">
        <tr>
            <td>Product ID:</td>
-           <td><input type="text" name="BookProductID" size="4"></td>
+           <td><input type="number" name="BookProductID" size="4" min ="100" max="1000" required ></td>
        </tr>
        <tr>
            <td>Name:</td>
-           <td><input type="text" name="BookProductName" size="20"></td>
+           <td><input type="text" name="BookProductName" size="20" minlength ="1" maxlength="100" required ></td>
        </tr>
        <tr>
            <td>Category ID:</td>
-           <td><input type="text" name="BookCategoryID" size="4"></td>
+           <td><input type="number" name="BookCategoryID" size="4" minlength="3" maxlength="10" required></td>
        </tr>
        <tr>
            <td>List Price:</td>
-           <td><input type="text" name="BookListPrice" size="10"></td>
+           <td><input type="number" name="BookListPrice" size="10" min="1" max="100" required></td>
        </tr>
        <tr>
            <td>Wholesale Price:</td>
-           <td><input type="text" name="BookWholesalePrice" size="10"></td>
+           <td><input type="number" name="BookWholesalePrice" size="10" min="1" max ="100" required></td>
        </tr>
        <tr>
            <td>Product Code:</td>
-           <td><input type="text" name="BookProductCode" size="10"></td>
+           <td><input type="text" name="BookProductCode" size="10" min ="3" max="10" required ></td>
        </tr>
        <tr>
            <td>Author:</td>
-           <td><input type="text" name="BookProductAuthor" size="10"></td>
+           <td><input type="text" name="BookProductAuthor" size="10" minlength="1" maxlength="100" required></td>
        </tr>
        <tr>
            <td>Description: </td>
-           <td><input type="text" name="BookDescription" size="10"></td>
+           <td><input type="text" name="BookDescription" size="10" minlength ="10" maxlength="255" required></td>
        </tr>
    </table><br>
    <input type="submit" value="Submit New Product">

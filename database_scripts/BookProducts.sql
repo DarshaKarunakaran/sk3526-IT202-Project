@@ -1,15 +1,9 @@
-/*Name: Saidarsha Karunakaran
---Date: 10/18/2024
---IT202-001
---Phase 2 Assignment: CRUD Categories and Items
---Email: sk3526@njit.edu
-*/
 -- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Host: sql2.njit.edu
--- Generation Time: Oct 18, 2024 at 03:55 AM
+-- Host: sql1.njit.edu
+-- Generation Time: Nov 15, 2024 at 10:42 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -49,6 +43,8 @@ CREATE TABLE IF NOT EXISTS `BookProducts` (
 --
 
 INSERT INTO `BookProducts` (`BookProductID`, `BookProductCode`, `BookProductName`, `BookProductAuthor`, `BookDescription`, `BookCategoryID`, `BookWholesalePrice`, `BookListPrice`, `DateCreated`) VALUES
+(100, 'TEST', 'TEST', 'TESTAUTHOR', 'UPDATE', 999, 90.00, 9.00, '2024-11-15 22:14:29'),
+(909, 'TST', 'TST', 'jhhjh', 'sjshsjsjsjhsjsjhs', 900, 91.00, 99.00, '2024-11-15 22:15:27'),
 (1000, 'PERCY', 'The Lightning Thief', 'Rick Riordan', 'The Lightning Thief is a young adult fantasy novel about a 12-year-old boy who discovers he is a demigod. He must return Zeus''s stolen lightning bolt to prevent a war between the gods.', 100, 11.99, 14.99, '2024-10-15 10:38:55'),
 (1001, 'HARRY', 'Harry Potter', 'JK Rowling', 'The Harry Potter series is about an orphan boy who discovers he is a wizard. He attends Hogwarts School of Witchcraft and Wizardry, where he learns about friendship, bravery, and the battle against dark forces.', 100, 8.99, 10.99, '2024-10-15 10:38:57'),
 (1002, 'POP', 'The Poppy Wars', 'RF Kuang', 'The Poppy War is a grimdark fantasy that draws its plot and politics from mid-20th-century China. The conflict in the novel is based on the Second Sino-Japanese War and explores the effects of war on its characters.', 100, 6.99, 8.99, '2024-10-15 10:38:59'),

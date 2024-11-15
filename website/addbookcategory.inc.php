@@ -1,30 +1,37 @@
 <?php
 /*Name: Saidarsha Karunakaran
-Date: 10/18/2024
+Date: 11/15/2024
 IT202-001
-Phase 2 Assignment: CRUD Categories and Items
+IT-202 Phase 4 Assignment: Input Filtering and CSS Styling
 Email: sk3526@njit.edu
 */
-// include("category.php");
+
 if (isset($_SESSION['login'])) {
-    $BookCategoryID = $_POST['BookCategoryID'];
-    if ((trim($BookCategoryID) == '') or (!is_numeric($BookCategoryID))) {
+    $BookCategoryID = filter_input(INPUT_POST, 'BookCategoryID', FILTER_VALIDATE_INT);
+    if (!$BookCategoryID) {
         echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
     } else {
-        $BookCategoryCode = $_POST['BookCategoryCode'];
-        $BookCategoryName = $_POST['BookCategoryName'];
-
-        if (isset($_POST['BookShelfNumber']) && trim($_POST['BookShelfNumber']) !== '') {
-            $BookShelfNumber = $_POST['BookShelfNumber']; 
-            $category = new Category($BookCategoryID, $BookCategoryCode, $BookCategoryName, $BookShelfNumber);
-            $result = $category->saveCategory();
-            if ($result) {
-                echo "<h2>New Category #$BookCategoryID successfully added</h2>\n";
-            } else {
-                echo "<h2>Sorry, there was a problem adding that category</h2>\n";
-            }
+        $BookCategoryCode = filter_input(INPUT_POST, 'BookCategoryCode', FILTER_SANITIZE_STRING);
+        if (empty($BookCategoryCode)) {
+            echo "<h2>Sorry, you must enter a valid category code</h2>\n";
         } else {
-            echo "<h2>Sorry, you must enter a valid shelf number</h2>\n";
+            $BookCategoryName = filter_input(INPUT_POST, 'BookCategoryName', FILTER_SANITIZE_STRING);
+            if (empty($BookCategoryName)) {
+                echo "<h2>Sorry, you must enter a valid category name</h2>\n";
+            } else {
+                $BookShelfNumber = filter_input(INPUT_POST, 'BookShelfNumber', FILTER_VALIDATE_INT);
+                if (!$BookShelfNumber) {
+                    echo "<h2>Sorry, you must enter a valid shelf number</h2>\n";
+                } else {
+                    $category = new Category($BookCategoryID, $BookCategoryCode, $BookCategoryName, $BookShelfNumber);
+                    $result = $category->saveCategory();
+                    if ($result) {
+                        echo "<h2>New Category #$BookCategoryID successfully added</h2>\n";
+                    } else {
+                        echo "<h2>Sorry, there was a problem adding that category</h2>\n";
+                    }
+                }
+            }
         }
     }
 } else {

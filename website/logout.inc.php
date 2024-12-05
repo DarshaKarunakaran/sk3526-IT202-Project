@@ -9,8 +9,11 @@ if (isset($_SESSION['login'])) {
    unset($_SESSION['login']);
 }
 
-session_unset();
-session_destroy();
-
-header("Location: index.php");
+if(headers_sent()){
+   echo "Click <a href=\"index.php?
+   content=logout\"><strong> here </strong></a>to logout.";
+}
+else{
+   header("Location: index.php");
+}
 ?>

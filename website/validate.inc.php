@@ -17,10 +17,10 @@ $stmt->bind_param("ss", $emailAddress, $password);
 $stmt->execute();
 $stmt->bind_result($firstName, $lastName, $pronouns);
 $fetched = $stmt->fetch();
-$name = "$firstName $lastName (" . $pronouns . ")";
+$name = "$firstName $lastName (" . $pronouns . ") $emailAddress";
 
 if ($fetched && isset($name)) {
-   echo "<h2>Welcome to Book Store Inventory Helper, $name </h2>\n";
+   echo "<h2>Welcome to Book Store Inventory Helper, $name $emailAddress</h2>\n";
    $_SESSION['login'] = $name;
 
    header("Location: index.php");

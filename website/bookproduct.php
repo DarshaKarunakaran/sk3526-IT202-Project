@@ -136,5 +136,30 @@ class Product {
         $db->close();
         return $result;
     }
+
+    static function getTotalItems()
+{
+   $db = getDB();
+   $query = "SELECT count(BookProductID) FROM BookProducts";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
+static function getTotalListPrice()
+{
+   $db = getDB();
+   $query = "SELECT sum(BookListPrice) FROM BookProducts";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
 }
 ?>

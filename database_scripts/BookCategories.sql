@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Nov 15, 2024 at 10:42 PM
+-- Generation Time: Dec 05, 2024 at 11:10 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -43,8 +43,7 @@ INSERT INTO `BookCategories` (`BookCategoryID`, `BookCategoryCode`, `BookCategor
 (200, 'SLF', 'Self-Help', '2024-10-15 14:38:41', 202),
 (300, 'COOK', 'Cookbook', '2024-10-15 14:38:43', 303),
 (400, 'SCIFI', 'Science Fiction Series', '2024-10-15 14:38:44', 404),
-(500, 'BIO', 'Biography', '2024-10-15 14:38:45', 505),
-(900, 'TST', 'TEST', '2024-11-15 21:56:03', 999);
+(500, 'BIO', 'Biography', '2024-10-15 14:38:45', 505);
 
 --
 -- Indexes for dumped tables

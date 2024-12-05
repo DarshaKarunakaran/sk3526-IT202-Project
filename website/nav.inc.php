@@ -49,7 +49,8 @@ Email: sk3526@njit.edu
        </tr>
        <tr>
            <td><a href="index.php?content=logout">
-           <img src="images/logout.png" alt="Logout Icon" width="12" height="12"></a>&nbsp;<a href="index.php?content=logout">
+           <img src="images/logout.png" alt="Logout Icon" width="12" height="12"></a>&nbsp;
+        <a href="index.php?content=logout">
                    <strong>Logout</strong></a></td>
        </tr>
        <tr>
